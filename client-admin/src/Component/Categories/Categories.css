@@ -1,0 +1,328 @@
+.categories-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .add-button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .add-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .categories-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .categories-table th,
+  .categories-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .categories-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .categories-table button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .categories-table button:hover {
+    background-color: #ddd;
+  }
+  
+  .form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .category-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  .category-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .category-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .category-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .home-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+  
+  
+  .home-header .left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .menu-button {
+    position: fixed;
+    top: 10px;
+    left: 20px; 
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 1001; 
+  }
+  
+  .menu-button.open {
+    color: #3498db; 
+    transform: rotate(180deg); 
+  }
+  
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%; 
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .menu-container.open {
+    transform: translateX(0); 
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    font-size: 16px;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .menu-list li:hover {
+    font-weight: bold;
+    color: #3498db;
+  }
+  
+  /* Icon người dùng */
+  .home-header .user-avatar {
+    width: 40px; /* Kích thước hình nhỏ */
+    height: 40px;
+    border-radius: 50%; /* Làm tròn hình ảnh */
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Hiệu ứng hover */
+  }
+  
+  .home-header .user-avatar:hover {
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+  }
+  
+  /* Dropdown menu */
+  .user-dropdown {
+    position: absolute;
+    top: 40px; /* Hiển thị bên dưới icon */
+    right: 10px; /* Căn chỉnh menu so với góc phải */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    min-width: 150px;
+  }
+  
+  .user-dropdown .dropdown-button {
+    display: flex;
+    align-items: center; /* Căn giữa chữ và icon */
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .user-dropdown .dropdown-button:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  .category-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Form Container */
+  .category-form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title */
+  .category-form-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #007bff;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button {
+    background-color: black;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+  
+  .save-button:hover {
+    background-color: rgb(196, 7, 7);
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: rgb(196, 7, 7);
+    color: #fff;
+  } 

@@ -1,0 +1,46 @@
+.footer {
+    background-color: #000; /* Màu nền đen */
+    color: #fff; /* Màu chữ trắng */
+    padding: 20px 0; /* Padding trên và dưới */
+    text-align: center;
+    width: 100%; /* Chiều rộng 100% để phủ toàn bộ trang */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ để làm nổi bật */
+    margin-top: auto; /* Đảm bảo footer nằm cuối cùng */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Giữ các phần tử cách đều nhau */
+    padding: 0 20px;
+    flex-wrap: wrap; /* Đảm bảo các phần tử sẽ xuống hàng nếu không đủ chỗ */
+}
+
+.footer-section {
+    flex: 1; /* Mỗi phần của footer chiếm 1 phần bằng nhau */
+    text-align: left; /* Căn trái cho nội dung */
+    margin: 10px 0; /* Khoảng cách trên dưới giữa các phần */
+    min-width: 200px; /* Đảm bảo mỗi phần có chiều rộng tối thiểu */
+}
+
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px; /* Khoảng cách giữa tiêu đề và nội dung */
+}
+
+.footer-section a {
+    color: #fff; /* Màu link chữ trắng */
+    text-decoration: none; /* Bỏ gạch chân */
+    display: block; /* Hiển thị mỗi link như một block */
+    margin-bottom: 5px; /* Khoảng cách giữa các link */
+}
+
+.footer-section a:hover {
+    color: #007bff; /* Màu xanh khi hover */
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center; /* Căn giữa nội dung copyright */
+}

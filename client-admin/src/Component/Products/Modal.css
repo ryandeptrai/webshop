@@ -1,0 +1,260 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+  overflow-y: auto;  /* Cho phép cuộn dọc */
+  max-height: 80vh;  /* Giới hạn chiều cao của modal */
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #ff4c4c;
+}
+
+/* Header */
+.modal-header {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #830404;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #830404;
+  box-shadow: 0 0 10px rgba(169, 24, 2, 0.3);
+}
+
+/* Error Messages */
+.error-text {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+
+/* Buttons */
+.save-button,
+.cancel-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+  width: 48%;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+.cancel-button {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  width: 48%;
+}
+
+.cancel-button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Màu sắc và Kích thước */
+.attribute-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Giữ khoảng cách giữa ô chọn màu và ô chọn kích thước */
+  margin-bottom: 15px;
+}
+
+/* Ô chọn màu */
+.attribute-item input[type="color"] {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 10px;  /* Khoảng cách giữa ô chọn màu và ô chọn kích thước */
+}
+
+/* Ô chọn kích thước */
+.attribute-item select {
+  width: 130px;  /* Kích thước ô chọn kích thước rộng hơn */
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+/* Nút Thêm thuộc tính */
+.attribute-item button {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.attribute-item button:hover {
+  background-color: #e63946;
+}
+
+/* Add Attribute Button */
+.add-attribute {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #a41609;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-attribute:hover {
+  background-color: #d52a07;
+}
+
+/* File Upload Button */
+input[type="file"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  background-color: #e2e6ea;
+}
+
+input[type="file"]:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(200, 29, 3, 0.3);
+}
+
+/* Custom styles cho các ô màu */
+.color-picker {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.color-option.selected {
+  border-color: #333;
+}
+
+.color-option:hover {
+  opacity: 0.8;
+}

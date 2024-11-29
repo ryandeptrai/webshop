@@ -1,0 +1,127 @@
+/* src/components/ProductList/ProductList.css */
+
+/* Vùng chứa danh sách sản phẩm */
+.product-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tiêu đề danh sách sản phẩm */
+.product-list-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Lưới sản phẩm */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Card của từng sản phẩm */
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hình ảnh sản phẩm */
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Placeholder nếu không có hình ảnh */
+.product-placeholder {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #aaa;
+  background-color: #f9f9f9;
+}
+
+/* Nội dung thẻ sản phẩm */
+.product-card-content {
+  padding: 15px;
+}
+
+/* Tên sản phẩm */
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Giá sản phẩm */
+.product-price {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  margin-bottom: 5px;
+}
+
+/* Giá cũ của sản phẩm (nếu có) */
+.product-old-price {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 10px;
+}
+/* Thêm CSS cho các nút Add to Cart và Add to Wishlist */
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.add-to-cart-button,
+.add-to-wishlist-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 48%; /* Để hai nút có chiều rộng bằng nhau */
+}
+
+.add-to-cart-button:hover,
+.add-to-wishlist-button:hover {
+  background-color: #2980b9;
+}
+
+.add-to-cart-button {
+  background-color: #27ae60;
+}
+
+.add-to-cart-button:hover {
+  background-color: #2ecc71;
+}
+
+.add-to-wishlist-button {
+  background-color: #e74c3c;
+}
+
+.add-to-wishlist-button:hover {
+  background-color: #c0392b;
+}

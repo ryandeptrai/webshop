@@ -1,0 +1,239 @@
+/* Container */
+.orders-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Add Button */
+.add-button {
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Orders Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Table Actions */
+.orders-table button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.orders-table button:hover {
+  background-color: #ddd;
+}
+
+/* Form Overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Order Form */
+.order-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.order-form h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.order-form input,
+.order-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Logo */
+.home-header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Header Left Section */
+.home-header .left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu Button */
+.menu-button {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 1001;
+}
+
+.menu-button.open {
+  color: #3498db;
+  transform: rotate(180deg);
+}
+
+/* Menu Container */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-container.open {
+  transform: translateX(0);
+}
+
+/* Menu List */
+.menu-list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu-list li {
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.menu-list li:hover {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* User Avatar */
+.home-header .user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.home-header .user-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* User Dropdown */
+.user-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+.user-dropdown .dropdown-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  text-align: left;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-dropdown .dropdown-button:hover {
+  background-color: #3498db;
+  color: white;
+}

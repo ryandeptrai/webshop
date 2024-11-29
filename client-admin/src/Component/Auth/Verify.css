@@ -1,0 +1,52 @@
+.verify-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Đảm bảo chiều cao nền ít nhất là chiều cao màn hình */
+  background-color: #f9f9f9;
+  padding: 20px; /* Thêm khoảng cách xung quanh để tránh sát màn hình */
+}
+
+.verify-container {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px; /* Bo góc nhẹ nhàng hơn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tăng độ đổ bóng */
+  width: 400px; /* Giữ nguyên hoặc điều chỉnh nếu cần */
+  max-width: 90%; /* Đảm bảo không bị tràn trên màn hình nhỏ */
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Khoảng cách giữa các ô nhập */
+  margin: 20px 0;
+}
+
+.code-input {
+  width: 50px; /* Điều chỉnh kích thước để phù hợp */
+  height: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.error-message {
+  color: red;
+  margin-top: 15px; /* Tăng khoảng cách */
+  font-size: 1.1em; /* Tăng kích thước chữ */
+}
+
+.success-message {
+  color: green;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
